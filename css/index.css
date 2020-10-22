@@ -1,0 +1,179 @@
+/* 清除默认样式 开始 */
+* {
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+img {
+  display: block;
+}
+li {
+  list-style: none;
+}
+i,
+em {
+  font-style: normal;
+}
+input,
+button {
+  border: 0;
+  outline: none;
+  background-color: transparent;
+}
+/* 清除默认样式 结束 */
+/* 便捷方式 开始 */
+.lt {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+.rt {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+.rb {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}
+.all {
+  width: 100%;
+  height: 100%;
+}
+.dn {
+  display: none;
+}
+.clt {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+/* 便捷方式 结束 */
+html,
+body {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.box {
+  background: url("../img/p2_5.png") no-repeat;
+  background-size: 100% 100%;
+  /* loading页面 开始 */
+  /* loading页面 结束 */
+  /* 开始页面 开始 */
+  /* 开始页面 结束 */
+}
+.box .filleted {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 96vw;
+  height: 98%;
+  z-index: 2;
+}
+.box .music {
+  position: absolute;
+  right: 7.46666667vw;
+  top: 8vw;
+  width: 10.53333333vw;
+  height: 10.53333333vw;
+  z-index: 2;
+}
+.box .loading .fc {
+  position: absolute;
+  top: 50%;
+  margin-top: -21vw;
+  left: 20vw;
+  width: 10.8vw;
+  height: 18.53333333vw;
+}
+.box .loading .progress {
+  left: 50%;
+  margin-left: -30.4vw;
+  position: absolute;
+  top: 50%;
+  margin-top: -1.93333333vw;
+  width: 60.8vw;
+  height: 3.86666667vw;
+}
+.box .loading .progress p {
+  width: 60.8vw;
+  height: 3.86666667vw;
+  border-radius: 2vw;
+  overflow: hidden;
+}
+.box .loading .progress p span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 2vw;
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: skyblue;
+}
+.box .loading .progress > span {
+  display: block;
+  text-align: center;
+  color: #fff;
+  margin-top: 3.73333333vw;
+  font-size: 4.26666667vw;
+}
+.box .page1 {
+  position: relative;
+}
+.box .page1 .scenery {
+  position: absolute;
+}
+.box .page1 .scenery .seascape {
+  width: 100vw;
+  height: 118.8vw;
+}
+.box .page1 .scenery .ship {
+  position: absolute;
+  left: 0;
+  bottom: 13.33333333vw;
+  width: 9.46666667vw;
+  height: 31.73333333vw;
+  animation: move 6s linear infinite alternate;
+}
+.box .page1 .scenery .glbumm {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 117.6vw;
+}
+.box .page1 .curtain-l {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 29.46666667vw;
+  height: 120vw;
+}
+.box .page1 .curtain-r {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 29.46666667vw;
+  height: 120vw;
+}
+.box .page1 .mainContent {
+  position: relative;
+}
+/* 动画 */
+@keyframes move {
+  0% {
+    left: 25%;
+  }
+  100% {
+    left: 65%;
+  }
+}
