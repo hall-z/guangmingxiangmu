@@ -1,3 +1,10 @@
+// 禁止页面拖拽
+document.addEventListener("touchmove", function (e) {
+    e.preventDefault();
+},{
+    passive:false
+});
+
 $(function(){
     let that ;
     class Light {
@@ -16,7 +23,6 @@ $(function(){
             this.PageX = 0;
             this.PageY = 0;
             this.init();
-           
         }
         init(){
             // this.timer();
@@ -63,11 +69,10 @@ $(function(){
                     that.flag = true;
                     that.fell();
                     document.querySelector(".page2 .imgBox").appendChild(that.img);
-                    that.PageX = that.img.pageX;
-                    that.PageY = that.img.pageY;
                 }
             }
         }
+        /* 图片拖拽事件 */
         fell(){
             let startX = 0;
             let startY = 0;
@@ -76,16 +81,30 @@ $(function(){
             if(!that.flag) {
                 return false;
             }
+            let imgPageX = null;
+            let imgPageY = null;
+            /* 图片拖拽事件 */
             $(".photographBox").on("touchstart",(e) => {
+                imgPageX = that.img.offsetLeft;
+                imgPageY = that.img.offsetTop;
                 startX = e.targetTouches[0].pageX;
                 startY = e.targetTouches[0].pageY;
             })
             $(".photographBox").on("touchmove",(e) => {
-                targetX = e.targetTouches[0].pageX - startX;
-                targetY =  e.targetTouches[0].pageY - startY;
-                $(".imgBox img").css("margin-left",`${targetX}px`).css("margin-top",`${targetY}px`);
+                targetX = e.targetTouches[0].pageX - startX + imgPageX ;
+                targetY =  e.targetTouches[0].pageY - startY + imgPageY;
+                if(targetX < 60){
+                    targetX = 60;
+                }else if(targetX > $(".fileDom").width() - 60){
+                    targetX =  $(".fileDom").width() - 60;
+                }
+                if(targetY < $(".fileDom").offset().top - 50){
+                    targetY = $(".fileDom").offset().top - 50;
+                }else if(targetY >  $(".fileDom").height() - 40){
+                    targetY =  $(".fileDom").height() - 40;
+                }
+                $(".imgBox img").css("left",`${targetX}px`).css("top",`${targetY}px`);
             })
-            
         }
     }
     new Light();
