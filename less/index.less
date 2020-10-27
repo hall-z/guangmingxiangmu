@@ -238,18 +238,25 @@ body {
     .page2 {
         position: absolute;
         z-index:2;
+        .logo {
+            position: absolute;
+            left: 84 / @vw;
+            top: 72 / @vw;
+            .setwh(100,132);
+        }
         .photographBox {
             .cl(689);
             .ct(1100);
             .setwh(689,801);
             input {
-                position: absolute;
                 z-index: 2;
-                .cl(576);
-                .ct(672);
                 font-size: 0;
-                .setwh(576,672);
                 opacity: 0;
+                .cl(600);
+                .ct(660);
+                .setwh(635,720);
+                clip-path: polygon(25% 0%, 65% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);
+                -webkit-clip-path: polygon(25% 0%, 65% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);  
             }
             .frame {
                 position: absolute;
@@ -263,10 +270,11 @@ body {
                 .setwh(567,672);
             }
             .imgBox {
-                .cl(540);
-                .ct(650);
-                .setwh(540,645);
-                border-radius: 100 / @vw 100 / @vw 300 / @vw 300 / @vw;
+                .cl(600);
+                .ct(660);
+                .setwh(635,720);
+                clip-path: polygon(25% 0%, 65% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);    
+                -webkit-clip-path: polygon(25% 0%, 65% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);    
                 overflow: hidden;
                 img {
                     position: absolute;
