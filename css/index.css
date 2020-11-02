@@ -70,6 +70,10 @@ body {
   /* 开始页面 结束 */
   /* 上传照片页面 开始 */
   /* 上传照片页面 结束 */
+  /* 检测结果页面 开始 */
+  /* 检测结果页面 结束 */
+  /* 抽奖页面 开始 */
+  /* 抽奖页面 结束 */
 }
 .box .filleted {
   position: absolute;
@@ -273,28 +277,56 @@ body {
   width: 15.6vw;
   height: 11.2vw;
 }
+.box .logo {
+  position: absolute;
+  left: 8vw;
+  top: 5.33333333vw;
+  width: 13.33333333vw;
+  height: 17.6vw;
+}
+.box .btnBox {
+  position: absolute;
+  left: 0;
+  bottom: 30.66666667vw;
+  z-index: 2;
+  width: 100%;
+}
+.box .btnBox div {
+  position: absolute;
+  left: 50%;
+  margin-left: -16.8vw;
+  width: 33.6vw;
+  height: 9.6vw;
+}
+.box .btnBox .drawBtn {
+  top: 13.33333333vw;
+}
 .box .page2 {
   position: absolute;
   z-index: 2;
 }
-.box .page2 .logo {
+.box .page2 img[class^="yuanb"] {
   position: absolute;
-  left: 11.2vw;
-  top: 9.6vw;
-  width: 13.33333333vw;
-  height: 17.6vw;
+  right: 13.33333333vw;
+  z-index: 3;
+  width: 14.53333333vw;
+  height: 10.13333333vw;
+}
+.box .page2 img[class^="frame"] {
+  z-index: 1;
 }
 .box .page2 .photographBox {
   left: 50%;
   margin-left: -45.93333333vw;
   position: absolute;
   top: 50%;
-  margin-top: -73.33333333vw;
+  margin-top: -76.66666667vw;
   width: 91.86666667vw;
   height: 106.8vw;
+  transform: scale(0.85);
 }
 .box .page2 .photographBox input {
-  z-index: 2;
+  z-index: 5;
   font-size: 0;
   opacity: 0;
   left: 50%;
@@ -307,11 +339,132 @@ body {
   clip-path: polygon(25% 0%, 65% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);
   -webkit-clip-path: polygon(25% 0%, 65% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);
 }
+.box .page2 .photographBox .photograph1 {
+  position: absolute;
+  left: 50%;
+  margin-left: -38.46666667vw;
+  top: 6.66666667vw;
+  width: 76.93333333vw;
+  height: 89.6vw;
+}
+.box .page2 .photographBox img[class*="star"] {
+  z-index: 3;
+}
 .box .page2 .photographBox .frame {
   position: absolute;
-  z-index: 1;
   width: 100%;
   height: 100%;
+  z-index: 3;
+}
+.box .page2 .photographBox .frame1 {
+  position: absolute;
+  left: 50%;
+  margin-left: -46.66666667vw;
+  top: 8vw;
+  width: 84vw;
+  height: 96vw;
+}
+.box .page2 .photographBox .frame2 {
+  position: absolute;
+  left: 50%;
+  margin-left: -52vw;
+  top: 8vw;
+  width: 106.66666667vw;
+  height: 97.33333333vw;
+}
+.box .page2 .photographBox .frame3 {
+  position: absolute;
+  left: 50%;
+  margin-left: -37.33333333vw;
+  top: 8vw;
+  width: 85.33333333vw;
+  height: 93.33333333vw;
+}
+.box .page2 .photographBox .loin {
+  position: absolute;
+  left: 2.66666667vw;
+  bottom: 0;
+  z-index: 3;
+  width: 43.73333333vw;
+  height: 37.2vw;
+}
+.box .page2 .photographBox .prew {
+  position: absolute;
+  right: 4vw;
+  bottom: 8vw;
+  z-index: 3;
+  width: 28.93333333vw;
+  height: 45.2vw;
+}
+.box .page2 .photographBox .hb {
+  position: absolute;
+  right: 22.66666667vw;
+  bottom: 42.66666667vw;
+  z-index: 3;
+  width: 11.86666667vw;
+  height: 12.13333333vw;
+}
+.box .page2 .photographBox .yuanb {
+  top: 6.66666667vw;
+}
+.box .page2 .photographBox .yuanb1 {
+  top: 50%;
+  left: 2.66666667vw;
+}
+.box .page2 .photographBox .yuanb2 {
+  width: 16vw;
+  height: 13.33333333vw;
+  right: 21.33333333vw;
+  bottom: 0vw;
+}
+.box .page2 .photographBox .prew1 {
+  position: absolute;
+  right: 9.33333333vw;
+  bottom: -4vw;
+  z-index: 3;
+  width: 23.6vw;
+  height: 50.26666667vw;
+}
+.box .page2 .photographBox .star {
+  position: absolute;
+  top: 40vw;
+  right: 10.66666667vw;
+  width: 11.46666667vw;
+  height: 12.8vw;
+}
+.box .page2 .photographBox .star1 {
+  position: absolute;
+  top: 21.33333333vw;
+  right: 13.33333333vw;
+  width: 16.81333333vw;
+  height: 18.89333333vw;
+}
+.box .page2 .photographBox .star2 {
+  position: absolute;
+  top: 50.66666667vw;
+  left: 13.33333333vw;
+  width: 7.86666667vw;
+  height: 8.8vw;
+}
+.box .page2 .photographBox .cstar {
+  position: absolute;
+  right: -5.33333333vw;
+  top: -2.66666667vw;
+  width: 34.8vw;
+  height: 30.8vw;
+}
+.box .page2 .photographBox .botany {
+  position: absolute;
+  left: 10.66666667vw;
+  bottom: -5.33333333vw;
+  width: 86.4vw;
+  height: 49.2vw;
+  z-index: 3;
+}
+.box .page2 .photographBox .one,
+.box .page2 .photographBox .two,
+.box .page2 .photographBox .thr {
+  display: none;
 }
 .box .page2 .photographBox .photograph {
   position: absolute;
@@ -329,15 +482,15 @@ body {
   margin-top: -44vw;
   width: 84.66666667vw;
   height: 96vw;
-  clip-path: polygon(25% 0%, 65% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);
-  -webkit-clip-path: polygon(25% 0%, 65% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);
+  z-index: 1;
+  clip-path: polygon(25% 0%, 75% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);
+  -webkit-clip-path: polygon(25% 0%, 75% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);
   overflow: hidden;
 }
 .box .page2 .photographBox .imgBox img {
   position: absolute;
   left: 50%;
   top: 50%;
-  transform: translate(-55%, -50%);
   width: auto;
   height: auto;
   max-width: 95%;
@@ -375,8 +528,471 @@ body {
   width: 100%;
   height: 100%;
 }
+.box .page2 .detection {
+  position: absolute;
+  left: 50%;
+  margin-left: -32.06666667vw;
+  bottom: 64vw;
+  width: 64.13333333vw;
+  transform: scale(0.9);
+}
+.box .page2 .detection .eye {
+  position: absolute;
+  left: 50%;
+  margin-left: -31.73333333vw;
+  width: 63.46666667vw;
+  height: 12.8vw;
+  opacity: 0;
+}
+.box .page2 .detection .nose {
+  position: absolute;
+  left: 50%;
+  margin-left: -31.6vw;
+  top: 16vw;
+  width: 63.2vw;
+  height: 15.06666667vw;
+  opacity: 0;
+}
+.box .page2 .detection .mouth {
+  position: absolute;
+  left: 50%;
+  margin-left: -32.06666667vw;
+  top: 36vw;
+  width: 64.13333333vw;
+  height: 12vw;
+  opacity: 0;
+}
+.box .page2 .detection .detectionBtn {
+  position: absolute;
+  left: 50%;
+  margin-left: -21.46666667vw;
+  top: 52vw;
+  width: 42.93333333vw;
+  height: 11.46666667vw;
+  opacity: 0;
+}
+.box .page2 .detection .detectionBtn img {
+  width: 100%;
+  height: 100%;
+}
+.box .page2 .succeed {
+  position: absolute;
+  left: 0;
+  bottom: 53.33333333vw;
+  width: 100%;
+}
+.box .page2 .succeed .name {
+  position: absolute;
+  left: 50%;
+  margin-left: -39.13333333vw;
+  width: 78.26666667vw;
+  height: 5.06666667vw;
+}
+.box .page2 .succeed .designation {
+  position: absolute;
+  left: 50%;
+  margin-left: -24.8vw;
+  top: 7.33333333vw;
+  width: 49.6vw;
+  height: 10.4vw;
+}
+.box .page2 .succeed img[class^="presentation"] {
+  top: 20vw;
+}
+.box .page2 .succeed .one,
+.box .page2 .succeed .two,
+.box .page2 .succeed .thr {
+  display: none;
+}
+.box .page2 .succeed .presentation {
+  position: absolute;
+  left: 50%;
+  margin-left: -24.86666667vw;
+  width: 49.73333333vw;
+  height: 8.13333333vw;
+}
+.box .page2 .succeed .presentation1 {
+  position: absolute;
+  left: 50%;
+  margin-left: -33.66666667vw;
+  width: 67.33333333vw;
+  height: 8.26666667vw;
+}
+.box .page2 .succeed .presentation2 {
+  position: absolute;
+  left: 50%;
+  margin-left: -27.06666667vw;
+  width: 54.13333333vw;
+  height: 8.13333333vw;
+}
+.box .page2 .succeed .generateBtn {
+  position: absolute;
+  left: 9.33333333vw;
+  top: 33.33333333vw;
+  width: 41.06666667vw;
+  height: 11.6vw;
+}
+.box .page2 .succeed .againBtn {
+  position: absolute;
+  right: 9.33333333vw;
+  top: 33.33333333vw;
+  width: 30.4vw;
+  height: 11.6vw;
+}
+.box .page2 .succeed1 {
+  bottom: 61.33333333vw;
+  transform: scale(0.9);
+}
+.box .page2 .save {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.box .page2 .save .eq {
+  position: absolute;
+  bottom: 6.66666667vw;
+  left: 6.66666667vw;
+  width: 16vw;
+  height: 16vw;
+}
+.box .page2 .save .commodity {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 49.06666667vw;
+  height: 49.06666667vw;
+}
+.box .page2 .rect {
+  background: url("../img/p3_10.png") no-repeat;
+  background-size: 100% 100%;
+  left: -1000px;
+  position: absolute;
+  width: 10.4vw;
+  height: 9.73333333vw;
+  top: -1000px;
+}
+.box .result {
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: url("../img/p1_20.png") rgba(24, 39, 140, 0.6) center center no-repeat;
+  background-size: 96% 98%;
+}
+.box .result img[class^="liquid"] {
+  position: absolute;
+  left: 50%;
+  margin-left: -40.93333333vw;
+  top: 0;
+  width: 81.86666667vw;
+  height: 82.8vw;
+}
+.box .result img[class^="beverages"] {
+  position: absolute;
+  left: 50%;
+  margin-left: -21.73333333vw;
+  top: -2.66666667vw;
+  width: 43.46666667vw;
+  height: 84.13333333vw;
+}
+.box .result .content {
+  left: 50%;
+  margin-left: -40.93333333vw;
+  position: absolute;
+  top: 50%;
+  margin-top: -60vw;
+  width: 81.86666667vw;
+  height: 82.8vw;
+}
+.box .result .content .liquid1 {
+  width: 81.6vw;
+  height: 82.8vw;
+}
+.box .result .content .liquid2 {
+  width: 81.86666667vw;
+  height: 82.8vw;
+}
+.box .result .content .beverages1 {
+  width: 43.86666667vw;
+  height: 83.73333333vw;
+}
+.box .result .content .beverages2 {
+  width: 44.4vw;
+  height: 84.13333333vw;
+}
+.box .result img[class^="introduceImg"] {
+  position: absolute;
+  left: 50%;
+  margin-left: -20.53333333vw;
+  width: 41.06666667vw;
+  height: 25.2vw;
+}
+.box .result .one,
+.box .result .two,
+.box .result .thr {
+  display: none;
+}
+.box .result .introduce {
+  position: absolute;
+  bottom: -50.66666667vw;
+  left: 0;
+  width: 100%;
+  height: 42.66666667vw;
+}
+.box .result .introduce .introduceImg1 {
+  width: 39.86666667vw;
+}
+.box .result .introduce .introduceImg2 {
+  position: absolute;
+  left: 50%;
+  margin-left: -23.73333333vw;
+  width: 47.46666667vw;
+}
+.box .result .introduce .hx {
+  position: absolute;
+  left: 50%;
+  margin-left: -19.73333333vw;
+  top: 8.53333333vw;
+  width: 39.46666667vw;
+  height: 1.6vw;
+}
+.box .result .introduce .hx1 {
+  position: absolute;
+  left: 50%;
+  margin-left: -26.2vw;
+  top: 8.53333333vw;
+  width: 52.4vw;
+  height: 1.6vw;
+}
+.box .result .introduce .resultBtn {
+  position: absolute;
+  left: 50%;
+  margin-left: -22.13333333vw;
+  bottom: 2.66666667vw;
+  width: 44.26666667vw;
+  height: 8.26666667vw;
+}
+.box .result .introduce .resultBtn img {
+  width: 100%;
+  height: 100%;
+}
+.box .lottery .content {
+  transform: scale(0.95);
+  position: absolute;
+  top: 50%;
+  margin-top: -73.33333333vw;
+  width: 100vw;
+}
+.box .lottery .content .reveal {
+  position: absolute;
+  left: 50%;
+  margin-left: -36.93333333vw;
+  width: 73.86666667vw;
+  height: 85.86666667vw;
+}
+.box .lottery .content .ray {
+  position: absolute;
+  top: -24vw;
+  width: 100vw;
+}
+.box .lottery .content .boxes {
+  position: absolute;
+  left: 50%;
+  margin-left: -17.6vw;
+  top: 84vw;
+  width: 35.2vw;
+  height: 38.4vw;
+}
+.box .lottery .content1 {
+  position: absolute;
+  top: 50%;
+  margin-top: -60vw;
+  width: 100%;
+}
+.box .lottery .content1 .shield {
+  width: 64.66666667vw;
+  height: 76.4vw;
+  position: absolute;
+  left: 50%;
+  margin-left: -32.33333333vw;
+  z-index: 1;
+}
+.box .lottery .content1 .denominator {
+  position: absolute;
+  left: 50%;
+  margin-left: -39vw;
+  top: 22.66666667vw;
+  z-index: 1;
+  width: 78vw;
+  height: 26vw;
+}
+.box .lottery .content1 .denominator1 {
+  position: absolute;
+  left: 50%;
+  margin-left: -30.8vw;
+  top: 20vw;
+  z-index: 1;
+  width: 61.6vw;
+  height: 25.86666667vw;
+}
+.box .lottery .content1 .ray {
+  position: absolute;
+  top: -24vw;
+  width: 100vw;
+}
+.box .lottery .content1 .boxes {
+  position: absolute;
+  left: 50%;
+  margin-left: -17.6vw;
+  top: 84vw;
+  width: 35.2vw;
+  height: 38.4vw;
+}
+.box .lottery .content2 {
+  position: absolute;
+  top: 50%;
+  margin-top: -66.66666667vw;
+  width: 100%;
+}
+.box .lottery .content2 .shield {
+  width: 64.66666667vw;
+  height: 76.4vw;
+  position: absolute;
+  left: 50%;
+  margin-left: -32.33333333vw;
+}
+.box .lottery .content2 .denominator {
+  position: absolute;
+  left: 50%;
+  margin-left: -38.26666667vw;
+  top: 17.33333333vw;
+  width: 76.53333333vw;
+  height: 34.8vw;
+}
+.box .lottery .content2 .denominator1 {
+  position: absolute;
+  left: 50%;
+  margin-left: -30.8vw;
+  top: 20vw;
+  z-index: 1;
+  width: 61.6vw;
+  height: 25.86666667vw;
+}
+.box .lottery .content2 .ray {
+  position: absolute;
+  top: -26.66666667vw;
+  width: 100vw;
+}
+.box .lottery .content2 .boxes {
+  position: absolute;
+  left: 50%;
+  margin-left: -17.6vw;
+  top: 80vw;
+  width: 35.2vw;
+  height: 38.4vw;
+}
+.box .lottery .content2 .message {
+  position: absolute;
+  left: 50%;
+  margin-left: -34.26666667vw;
+  bottom: -109.33333333vw;
+  width: 68.53333333vw;
+  z-index: 2;
+}
+.box .lottery .content2 .message input {
+  color: #fff;
+  font-size: 1.6vw;
+}
+.box .lottery .content2 .message .smtBtn {
+  position: absolute;
+  left: 50%;
+  margin-left: -14.93333333vw;
+  top: 24vw;
+  width: 29.86666667vw;
+  height: 11.2vw;
+}
+.box .lottery .content2 .message .name {
+  position: absolute;
+  left: 50%;
+  margin-left: -34.26666667vw;
+  width: 68.53333333vw;
+  height: 4.26666667vw;
+}
+.box .lottery .content2 .message .nameK {
+  position: absolute;
+  left: 12.66666667vw;
+  width: 56vw;
+  height: 4.26666667vw;
+}
+.box .lottery .content2 .message .telK {
+  position: absolute;
+  left: 12.66666667vw;
+  TOP: 6.66666667vw;
+  width: 56vw;
+  height: 4.26666667vw;
+}
+.box .lottery .content2 .message .siteK {
+  position: absolute;
+  top: 13.33333333vw;
+  left: 22.66666667vw;
+  width: 46.66666667vw;
+  height: 4.26666667vw;
+}
+.box .lottery .content2 .message .tel {
+  position: absolute;
+  left: 50%;
+  margin-left: -33.8vw;
+  top: 6.66666667vw;
+  width: 67.6vw;
+  height: 4.4vw;
+}
+.box .lottery .content2 .message .site {
+  position: absolute;
+  left: 50%;
+  margin-left: -33.8vw;
+  top: 13.33333333vw;
+  width: 67.6vw;
+  height: 4.8vw;
+}
+.box .lottery .lottery-introduce {
+  position: absolute;
+  left: 0;
+  bottom: 50.66666667vw;
+  width: 100%;
+  z-index: 2;
+}
+.box .lottery .lottery-introduce .lottery-introduce-img {
+  position: absolute;
+  left: 50%;
+  margin-left: -33.73333333vw;
+  width: 67.46666667vw;
+  height: 24.66666667vw;
+}
+.box .lottery .lottery-introduce .lotteryBtn {
+  width: 29.86666667vw;
+  height: 11.46666667vw;
+  position: absolute;
+  left: 50%;
+  margin-left: -14.93333333vw;
+  top: 29.33333333vw;
+}
 .anima .ksbtn {
   animation: bounce 1s infinite linear;
+}
+.anima .detection .eye {
+  animation: fadeInUp 1s linear forwards;
+}
+.anima .detection .nose {
+  animation: fadeInUp 1s linear forwards 0.5s;
+}
+.anima .detection .mouth {
+  animation: fadeInUp 1s linear forwards 1s;
+}
+.anima .detection .detectionBtn {
+  animation: bounceIn 1s forwards linear 1s;
 }
 .anima .title {
   opacity: 0;
@@ -653,12 +1269,40 @@ body {
   .box .page1 .ksbtn {
     bottom: 5.33333333vw;
   }
+  .box .page2 .logo {
+    top: 4.66666667vw;
+  }
   .box .page2 .photographBox {
     top: 50%;
-    margin-top: -70vw;
+    margin-top: -76.66666667vw;
     position: absolute;
     left: 50%;
     margin-left: -45.93333333vw;
     transform: scale(0.8);
+  }
+  .box .page2 .detection {
+    bottom: 64vw;
+    transform: scale(0.9);
+  }
+  .box .page2 .succeed1 {
+    bottom: 57.33333333vw;
+    transform: scale(0.9);
+  }
+  .box .lottery .content {
+    position: absolute;
+    top: 50%;
+    margin-top: -68vw;
+    transform: scale(0.9);
+  }
+  .box .lottery .content2 .message {
+    bottom: -106.66666667vw;
+  }
+  .box .lottery .lottery-introduce {
+    bottom: 46.66666667vw;
+    transform: scale(0.9);
+  }
+  .box .btnBox {
+    bottom: 26.66666667vw;
+    transform: scale(0.9);
   }
 }
