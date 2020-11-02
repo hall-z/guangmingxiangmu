@@ -235,21 +235,46 @@ body {
     }
     /* 开始页面 结束 */
     /* 上传照片页面 开始 */
+    .logo {
+        position: absolute;
+        left: 60 / @vw;
+        top: 40 / @vw;
+        .setwh(100,132);
+    }
+    .btnBox {
+        position: absolute;
+        left: 0;
+        bottom: 230 / @vw;
+        z-index: 2;
+        width: 100%;
+        div {
+            .cl(252);
+            .setwh(252,72);
+        }
+        .drawBtn {
+           top: 100 / @vw;
+        }
+    }
     .page2 {
         position: absolute;
         z-index:2;
-        .logo {
+        
+        img[class^="yuanb"] {
             position: absolute;
-            left: 84 / @vw;
-            top: 72 / @vw;
-            .setwh(100,132);
+            right: 100 / @vw;
+            z-index: 3;
+            .setwh(109,76);
+        }
+        img[class ^="frame"]{
+            z-index: 1;
         }
         .photographBox {
             .cl(689);
-            .ct(1100);
+            .ct(1150);
             .setwh(689,801);
+            transform: scale(.85);
             input {
-                z-index: 2;
+                z-index: 5;
                 font-size: 0;
                 opacity: 0;
                 .cl(600);
@@ -258,11 +283,111 @@ body {
                 clip-path: polygon(25% 0%, 65% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);
                 -webkit-clip-path: polygon(25% 0%, 65% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);  
             }
+            .photograph1 {
+                .cl(577);
+                top: 50 / @vw;
+                .setwh(577,672);
+            }
+            
+            img[class *= "star"]{
+                z-index:3;
+            }
             .frame {
                 position: absolute;
-                z-index: 1;
                 width: 100%;
                 height: 100%;
+                z-index: 3;
+            }
+            .frame1 {
+                .cl(700);
+                top: 60 / @vw;
+                .setwh(630,720);
+            }
+            .frame2 {
+                .cl(780);
+                top: 60 / @vw;
+                .setwh(800,730);
+            }
+            .frame3 {
+                .cl(560);
+                top: 60 / @vw;
+                .setwh(640,700);
+            }
+            .loin {
+                position: absolute;
+                left: 20 / @vw;
+                bottom: 0;
+                z-index: 3;
+                .setwh(328,279);
+            }
+            .prew {
+                position: absolute;
+                right: 30 / @vw;
+                bottom: 60 / @vw;
+                z-index: 3;
+                .setwh(217,339);
+            }
+            .hb {
+                position: absolute;
+                right: 170 / @vw;
+                bottom: 320 / @vw;
+                z-index: 3;
+                .setwh(89,91);
+            }
+            .yuanb {
+                top: 50 / @vw;
+            }
+            .yuanb1 {
+                top: 50%;
+                left: 20 / @vw;
+            }
+            .yuanb2 {
+                .setwh(120,100);
+                right: 160 / @vw;
+                bottom: 0 / @vw;
+            }
+            .prew1 {
+                position: absolute;
+                right: 70 / @vw;
+                bottom: -30 / @vw;
+                z-index: 3;
+                .setwh(177,377);
+            }
+            .star {
+                position: absolute;
+                top: 300 / @vw;
+                right: 80 / @vw; 
+                .setwh(86,96);
+            }
+            .star1 {
+                position: absolute;
+                top: 160 / @vw;
+                right: 100 / @vw;
+                .setwh(97 *1.3,109 * 1.3);
+            }
+            .star2 {
+                position: absolute;
+                top: 380 / @vw;
+                left: 100 / @vw;
+                .setwh(59,66);
+            }
+            .cstar {
+                position: absolute;
+                right: -40 / @vw;
+                top: -20 / @vw;
+                .setwh(261,231);
+            }
+            .botany {
+                position: absolute;
+                left: 80 / @vw;
+                bottom: -40 / @vw;
+                .setwh(648,369);
+                z-index: 3;
+            }
+            .one,
+            .two,
+            .thr {
+                display: none;
             }
             .photograph {
                 .cl(567);
@@ -273,19 +398,21 @@ body {
                 .cl(600);
                 .ct(660);
                 .setwh(635,720);
-                clip-path: polygon(25% 0%, 65% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);    
-                -webkit-clip-path: polygon(25% 0%, 65% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);    
+                z-index: 1;
+                clip-path: polygon(25% 0%, 75% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);    
+                -webkit-clip-path: polygon(25% 0%, 75% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);    
                 overflow: hidden;
                 img {
                     position: absolute;
+                    
                     left: 50%;
                     top: 50%;
-                    transform: translate(-55%,-50%);
                     width: auto;
                     height: auto;
                     max-width: 95%;
                 }
             }
+            
         }
         .scBom {
             position: absolute;
@@ -312,8 +439,344 @@ body {
                 }
             }
         }
+        .detection {
+            .cl(481);
+            bottom: 480 / @vw;
+            width: 481 / @vw;
+            transform: scale(.9);
+            .eye {
+                .cl(476);
+                .setwh(476,96);
+                opacity: 0;
+            }
+            .nose {
+                .cl(474);
+                top: 120 / @vw;
+                .setwh(474,113);
+                opacity: 0;
+            }
+            .mouth {
+                .cl(481);
+                top: 270 / @vw;
+                .setwh(481,90);
+                opacity: 0;
+            }
+            .detectionBtn {
+                .cl(322);
+                top: 390 / @vw;
+                .setwh(322,86);
+                opacity: 0;
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+        
+        .succeed {
+            position: absolute;
+            left: 0;
+            bottom: 400 / @vw;
+            width: 100%;
+            .name {
+                .cl(587);
+                .setwh(587,38);
+            }
+            .designation {
+                .cl(372);
+                top: 55 / @vw;
+                .setwh(372,78);
+            }
+            img[class^="presentation"]{
+                top: 150 / @vw;
+            }
+            .one,
+            .two,
+            .thr {
+                display: none;
+            }
+            .presentation {
+                .cl(373);
+                .setwh(373,61);
+            }
+            .presentation1 {
+                .cl(505);
+                .setwh(505,62);
+            }
+            .presentation2 {
+                .cl(406);
+                .setwh(406,61);
+            }
+            .generateBtn {
+                position: absolute;
+                left: 70 / @vw;
+                top: 250 / @vw;
+                .setwh(308,87);
+            }
+            .againBtn {
+                position: absolute;
+                right: 70 / @vw;
+                top: 250 / @vw;
+                .setwh(228,87);
+            }
+        }
+        .succeed1 {
+            bottom: 460 / @vw;
+            transform: scale(.9);
+        }
+        .save {
+            position: absolute;
+            bottom: 0; 
+            left: 0;
+            width: 100%;
+            .eq {
+                position: absolute;
+                bottom: 50 / @vw;
+                left: 50 / @vw;
+                .setwh(120,120);
+            }
+            .commodity {
+                .rb;
+                .setwh(368,368);
+            }
+        }
+        .rect {
+            background: url("../img/p3_10.png") no-repeat ;
+            background-size: 100% 100%;
+            left: -1000px;
+            position: absolute;
+            width: 78 / @vw;
+            height: 73 / @vw;
+            top: -1000px;
+        }
     }
     /* 上传照片页面 结束 */
+    /* 检测结果页面 开始 */
+    .result {
+        .lt;
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        background:url("../img/p1_20.png") rgba(24,39,140,.6)  center center no-repeat;
+        background-size: 96% 98%;
+        img[class^="liquid"] {
+            .cl(614);
+            top: 0;
+            .setwh(614,621);
+        }
+        img[class ^= "beverages"] {
+            .cl(326);
+            top: -20 / @vw;
+            .setwh(326,631);
+        }
+        .content {
+            .cl(614);
+            .ct(900);
+            .setwh(614,621);
+            
+            .liquid1 {
+                .setwh(612,621);
+            }
+            .liquid2 {
+                .setwh(614,621);
+            }
+            .beverages1 {
+                .setwh(329,628);
+            }
+            .beverages2 {
+                .setwh(333,631);
+            }
+        }
+        img[class^="introduceImg"] {
+            .cl(308);
+            .setwh(308,189);
+        }
+        .one,
+        .two,
+        .thr {
+            display: none;
+        }
+        .introduce {
+            position: absolute;
+            bottom: -380 / @vw;
+            left: 0;
+            width: 100%;
+            height: 320 / @vw;
+            
+            .introduceImg1 {
+                width: 299 / @vw;
+            }
+            .introduceImg2 {
+                .cl(356);
+                width: 356 / @vw; 
+            }
+            .hx {
+                .cl(296);
+                top: 64 / @vw;
+                .setwh(296,12);
+            }
+            .hx1 {
+                .cl(393);
+                top: 64 / @vw;
+                .setwh(393,12);
+            }
+            .resultBtn {
+                .cl(332);
+                bottom: 20 / @vw;
+                .setwh(332,62);
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+    /* 检测结果页面 结束 */
+    /* 抽奖页面 开始 */
+    .lottery {
+        .content {
+            transform: scale(.95);
+            .ct(1100);
+            width: 750 / @vw;
+            .reveal {
+                .cl(554);
+                .setwh(554,644);
+            }
+            .ray {
+                position: absolute;
+                top: -180 / @vw;
+                width: 750 / @vw;
+            }
+            .boxes {
+                .cl(264);
+                top: 630 / @vw;
+                .setwh(264,288);
+            }
+        }
+        .content1 {
+            .ct(900);
+            width: 100%;
+            .shield {
+                .setwh(485,573);
+                .cl(485);
+                z-index: 1;
+            }
+            .denominator {
+                .cl(585);
+                top: 170 / @vw;
+                z-index: 1;
+                .setwh(585,195);
+            }
+            .denominator1 {
+                .cl(462);
+                top: 150 / @vw;
+                z-index: 1;
+                .setwh(462,194);
+            }
+            .ray {
+                position: absolute;
+                top: -180 / @vw;
+                width: 750 / @vw;
+            }
+            .boxes {
+                .cl(264);
+                top: 630 / @vw;
+                .setwh(264,288);
+            }
+        }
+        .content2 {
+            .ct(1000);
+            width: 100%;
+            .shield {
+                .setwh(485,573);
+                .cl(485);
+            }
+            .denominator {
+                .cl(574);
+                top: 130 / @vw;
+                .setwh(574,261);
+            }
+            .denominator1 {
+                .cl(462);
+                top: 150 / @vw;
+                z-index: 1;
+                .setwh(462,194);
+            }
+            .ray {
+                position: absolute;
+                top: -200 / @vw;
+                width: 750 / @vw;
+            }
+            .boxes {
+                .cl(264);
+                top: 600 / @vw;
+                .setwh(264,288);
+            }
+            .message {
+                .cl(514);
+                bottom: -820 / @vw;
+                width: 514 / @vw;
+                z-index: 2;
+                input {
+                    color: #fff;
+                    font-size: 12 / @vw;
+                }
+                .smtBtn {
+                    .cl(224);
+                    top: 180 / @vw;
+                    .setwh(224,84);
+                }
+                .name {
+                    .cl(514);
+                    .setwh(514,32);
+                }
+                .nameK {
+                    position: absolute;
+                    left: 95 / @vw;
+                    .setwh(420,32);
+                }
+                .telK {
+                    position: absolute;
+                    left: 95 / @vw;
+                    TOP: 50 / @vw;
+                    .setwh(420,32);
+                }
+                .siteK {
+                    position: absolute;
+                    top: 100 / @vw;
+                    left: 170 / @vw;
+                    .setwh(350,32);
+                }
+                .tel {
+                    .cl(507);
+                    top: 50 / @vw;
+                    .setwh(507,33);
+                }
+                .site {
+                    .cl(507);
+                    top: 100 / @vw;
+                    .setwh(507,36);
+                }
+            }
+        }
+        .lottery-introduce {
+            position: absolute;
+            left: 0;
+            bottom: 380 / @vw;
+            width: 100%;
+            z-index: 2;
+            .lottery-introduce-img {
+                .cl(506);
+                .setwh(506,185);
+            }
+            .lotteryBtn {
+                .setwh(224,86);
+                .cl(224);
+                top: 220 / @vw;
+            }
+        }
+    }
+    /* 抽奖页面 结束 */
 }
 .anima {
     .ksbtn {
@@ -321,6 +784,20 @@ body {
     }
     .ship {
 
+    }
+    .detection {
+        .eye {
+            animation: fadeInUp 1s linear forwards;
+        }
+        .nose {
+            animation: fadeInUp 1s linear forwards .5s;
+        }
+        .mouth {
+            animation: fadeInUp 1s linear forwards 1s;
+        }
+        .detectionBtn {
+            animation: bounceIn 1s forwards linear 1s;
+        }
     }
     .title {
         opacity: 0;
@@ -394,6 +871,7 @@ body {
         left: 65%;
     }
 }
+
 @keyframes zoomInDown {
     from {
       opacity: 0;
@@ -619,11 +1097,41 @@ body {
             }
         }
         .page2 {
+            .logo {
+                top: 35 / @vw;
+            }
             .photographBox {
-                .ct(1050);
+                .ct(1150);
                 .cl(689);
                 transform: scale(.8);
             }
+            .detection {
+                bottom: 480 / @vw;
+                transform: scale(.9);
+            }
+            .succeed1 {
+                bottom: 430 / @vw;
+                transform: scale(.9);
+            }
+        }
+        .lottery {
+            .content {
+                .ct(1020);
+                transform: scale(.9);
+            }
+            .content2 {
+                .message {
+                    bottom: -800 / @vw;
+                }
+            }
+            .lottery-introduce {
+                bottom: 350 / @vw;
+                transform: scale(.9);
+            }
+        }
+        .btnBox {
+            bottom: 200 / @vw;
+            transform: scale(.9);
         }
     }
 }
