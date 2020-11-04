@@ -2,6 +2,7 @@
 * {
     margin: 0;
     padding: 0;
+    user-select:none;
 }
 a {
     text-decoration: none;
@@ -9,6 +10,7 @@ a {
 }
 img {
     display: block;
+    pointer-events: none;
 }
 li {
     list-style: none;
@@ -77,6 +79,9 @@ body {
     overflow: hidden;
 }
 .box {
+    position: absolute;
+    left: 0;
+    top: 0;
     background: url("../img/p2_5.png") no-repeat;
     background-size: 100% 100%;
     .filleted {
@@ -251,14 +256,22 @@ body {
             .cl(252);
             .setwh(252,72);
         }
+        .saveBtn {
+            pointer-events: none;
+        }
         .drawBtn {
            top: 100 / @vw;
         }
     }
     .page2 {
         position: absolute;
+        left: 0;
+        top: 0;
         z-index:2;
-        
+        width: 100%;
+        height: 100%;
+        background: url("../img/p2_5.png") no-repeat;
+        background-size: 100% 100%;
         img[class^="yuanb"] {
             position: absolute;
             right: 100 / @vw;
@@ -272,6 +285,7 @@ body {
             .cl(689);
             .ct(1150);
             .setwh(689,801);
+            z-index: 2;
             transform: scale(.85);
             input {
                 z-index: 5;
@@ -395,12 +409,11 @@ body {
                 .setwh(567,672);
             }
             .imgBox {
-                .cl(600);
+                .cl(580);
                 .ct(660);
-                .setwh(635,720);
+                .setwh(580,650);
                 z-index: 1;
-                clip-path: polygon(25% 0%, 75% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);    
-                -webkit-clip-path: polygon(25% 0%, 75% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);    
+                border-radius: 10% 10% 50% 50%;
                 overflow: hidden;
                 img {
                     position: absolute;
@@ -409,10 +422,9 @@ body {
                     top: 50%;
                     width: auto;
                     height: auto;
-                    max-width: 95%;
+                    max-width: 100%;
                 }
             }
-            
         }
         .scBom {
             position: absolute;
@@ -432,7 +444,7 @@ body {
                 .cl(247);
                 top: 190 / @vw;
                 .setwh(247,86);
-               
+                z-index: 2;
                 img {
                     width: 100%;
                     height: 100%;
@@ -444,6 +456,7 @@ body {
             bottom: 480 / @vw;
             width: 481 / @vw;
             transform: scale(.9);
+            z-index: 2;
             .eye {
                 .cl(476);
                 .setwh(476,96);
@@ -478,6 +491,7 @@ body {
             left: 0;
             bottom: 400 / @vw;
             width: 100%;
+            z-index: 2;
             .name {
                 .cl(587);
                 .setwh(587,38);
@@ -538,6 +552,7 @@ body {
             .commodity {
                 .rb;
                 .setwh(368,368);
+                z-index: 3;
             }
         }
         .rect {
@@ -719,7 +734,7 @@ body {
                 z-index: 2;
                 input {
                     color: #fff;
-                    font-size: 12 / @vw;
+                    font-size: 32 / @vw;
                 }
                 .smtBtn {
                     .cl(224);

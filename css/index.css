@@ -2,6 +2,7 @@
 * {
   margin: 0;
   padding: 0;
+  user-select: none;
 }
 a {
   text-decoration: none;
@@ -9,6 +10,7 @@ a {
 }
 img {
   display: block;
+  pointer-events: none;
 }
 li {
   list-style: none;
@@ -62,6 +64,9 @@ body {
   overflow: hidden;
 }
 .box {
+  position: absolute;
+  left: 0;
+  top: 0;
   background: url("../img/p2_5.png") no-repeat;
   background-size: 100% 100%;
   /* loading页面 开始 */
@@ -298,12 +303,21 @@ body {
   width: 33.6vw;
   height: 9.6vw;
 }
+.box .btnBox .saveBtn {
+  pointer-events: none;
+}
 .box .btnBox .drawBtn {
   top: 13.33333333vw;
 }
 .box .page2 {
   position: absolute;
+  left: 0;
+  top: 0;
   z-index: 2;
+  width: 100%;
+  height: 100%;
+  background: url("../img/p2_5.png") no-repeat;
+  background-size: 100% 100%;
 }
 .box .page2 img[class^="yuanb"] {
   position: absolute;
@@ -323,6 +337,7 @@ body {
   margin-top: -76.66666667vw;
   width: 91.86666667vw;
   height: 106.8vw;
+  z-index: 2;
   transform: scale(0.85);
 }
 .box .page2 .photographBox input {
@@ -476,15 +491,14 @@ body {
 }
 .box .page2 .photographBox .imgBox {
   left: 50%;
-  margin-left: -40vw;
+  margin-left: -38.66666667vw;
   position: absolute;
   top: 50%;
   margin-top: -44vw;
-  width: 84.66666667vw;
-  height: 96vw;
+  width: 77.33333333vw;
+  height: 86.66666667vw;
   z-index: 1;
-  clip-path: polygon(25% 0%, 75% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);
-  -webkit-clip-path: polygon(25% 0%, 75% 0%, 90% 6%, 90% 45%, 80% 70%, 48% 93%, 25% 80%, 3% 52%, 3% 6%);
+  border-radius: 10% 10% 50% 50%;
   overflow: hidden;
 }
 .box .page2 .photographBox .imgBox img {
@@ -493,7 +507,7 @@ body {
   top: 50%;
   width: auto;
   height: auto;
-  max-width: 95%;
+  max-width: 100%;
 }
 .box .page2 .scBom {
   position: absolute;
@@ -523,6 +537,7 @@ body {
   top: 25.33333333vw;
   width: 32.93333333vw;
   height: 11.46666667vw;
+  z-index: 2;
 }
 .box .page2 .scBom .p2Btn img {
   width: 100%;
@@ -535,6 +550,7 @@ body {
   bottom: 64vw;
   width: 64.13333333vw;
   transform: scale(0.9);
+  z-index: 2;
 }
 .box .page2 .detection .eye {
   position: absolute;
@@ -580,6 +596,7 @@ body {
   left: 0;
   bottom: 53.33333333vw;
   width: 100%;
+  z-index: 2;
 }
 .box .page2 .succeed .name {
   position: absolute;
@@ -662,6 +679,7 @@ body {
   bottom: 0;
   width: 49.06666667vw;
   height: 49.06666667vw;
+  z-index: 3;
 }
 .box .page2 .rect {
   background: url("../img/p3_10.png") no-repeat;
@@ -904,7 +922,7 @@ body {
 }
 .box .lottery .content2 .message input {
   color: #fff;
-  font-size: 1.6vw;
+  font-size: 4.26666667vw;
 }
 .box .lottery .content2 .message .smtBtn {
   position: absolute;

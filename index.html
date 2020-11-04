@@ -6,8 +6,8 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
     <title>光明</title>
-    <link rel="stylesheet" href="css/layer.css?v=631">
-    <link rel="stylesheet" href="css/index.css?v=631">
+    <link rel="stylesheet" href="css/layer.css?v=654">
+    <link rel="stylesheet" href="css/index.css?v=654">
 </head>
 
 <body>
@@ -60,6 +60,8 @@
         <!-- home页面 结束 -->
         <!-- 上传照片页面 开始 -->
         <div class="page2 all dn">
+            <canvas></canvas>
+            <img src="img/p1_20.png" class="filleted">
             <img src="img/p1_7.png" class="logo">
             <div class="photographBox">
                 <img src="img/p2_2.png" class="photograph">
@@ -68,6 +70,7 @@
                 <img src="img/p5xx.png" class="frame2 one dn">
                 <img src="img/p5yz.png" class="frame3 two">
                 <input type="file" class="fileDom">
+
                 <img src="img/p2_6.png" class="frame">
                 <img src="img/p5_19.png" class="loin thr">
                 <img src="img/p5_110.png" class="prew thr">
@@ -122,6 +125,7 @@
                 <img src="img/p6_13.png" class="eq">
                 <img src="img/p6_14.png" class="commodity">
             </div>
+            <img src="" class="dtImg">
         </div>
         <div class="btnBox dn">
             <div class="saveBtn">
@@ -176,9 +180,9 @@
                 <img src="img/p7_14.png" class="boxes">
                 <div class="message">
                     <img src="img/p7_27.png" class="name">
-                    <input type="text" class="nameK">
+                    <input type="text" class="nameK" maxlength="4">
                     <img src="img/p7_28.png" class="tel">
-                    <input type="text" class="telK">
+                    <input type="tel" class="telK" maxlength="11">
                     <img src="img/p7_24.png" class="site">
                     <input type="text" class="siteK">
                     <div class="smtBtn">
@@ -200,8 +204,9 @@
     <script src="js/mouth-min.js"></script>
     <script src="js/face-min.js"></script>
     <script src="js/eye-min.js"></script>
+    <script src="js/html2canvas.min.js"></script>
     <script src="layer/mobile/layer.js"></script>
-    <script src="js/index.js?v=631"></script>
+    <script src="js/index.js?v=654"></script>
 </body>
 
 </html>
