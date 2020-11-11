@@ -4,13 +4,21 @@ document.addEventListener("touchmove", function (e) {
 }, {
     passive: false
 });
-window.onresize = function () {
+var winHeight = $(window).height();   //获取当前页面高度
+$(window).resize(function () {
+    var thisHeight = $(this).height();
+    if (winHeight - thisHeight > 50) {
+        //当软键盘弹出，在这里面操作
+    } else {
+        //当软键盘收起，在此处操作
+
+    }
     setTimeout(() => {
         var scrollHeight = document.documentElement.scrollTop || document.body.scrollTop || 0
         window.scrollTo(0, Math.max(scrollHeight, 0))
     }, 100);
-}
 
+});
 $(function () {
     let that;
     class Light {
@@ -18,6 +26,9 @@ $(function () {
             /* 创建变量 记录进度条 */
             this.flag = 0;
             that = this;
+            this.bodyW = document.body.clientWidth;
+            this.bodyH = document.body.clientHeight;
+            $(".box").css("min-height", this.bodyH + "px").css("min-width", this.bodyW + "px");
             /* 记录loading页面的dom页面 */
             this.Pixel = window.devicePixelRatio;//获取到设备像素比
             this.loading = document.querySelector(".loading");
@@ -47,7 +58,10 @@ $(function () {
             this.timer();
             $(".page2 .fileDom").on("change", this.uploading);
             $(this.btn1).on("click", () => {
-                that.showHide(this.page2, this.page1);
+                that.showHide(this.page2, this.page1, function () {
+                    $(".music").hide();
+                    $(".page2 .music").show();
+                });
             })
             $(this.p2Btn).on("click", () => {
                 if (that.flag1) {
@@ -158,6 +172,14 @@ $(function () {
                     });
                     return false;
                 }
+                if (!/^[\u4E00-\u9FA5]{2,}$/.test($(".nameK").val().trim())) {
+                    //提示
+                    layer.open({
+                        content: '请填写正确的姓名',
+                        skin: 'msg',
+                        time: 3 //2秒后自动关闭
+                    });
+                }
                 $(".lottery .content2").fadeOut("show", function () {
                     $(".lottery .content1").fadeIn();
                 });
@@ -197,11 +219,6 @@ $(function () {
                 that.showHide($(".lottery"), $(".page2"));
                 $(".btnBox").hide();
                 $("img").css("pointer-events", "none");
-            })
-            $(".nameK").on("input", () => {
-                if (!/^[\u4E00-\u9FA5]{2,}$/.test($(".nameK").val().trim())) {
-                    $(".nameK").val($(".nameK").val().slice(0, $(".nameK").val().length - 1));
-                }
             })
 
         }
